@@ -1,101 +1,111 @@
+import { HeroParallax } from "@/components/ui/hero-parallax";
 import Image from "next/image";
+const products = [
+  {
+    title: "Wireless Bluetooth Headphones",
+    link: "https://example.com/products/wireless-bluetooth-headphones",
+    thumbnail: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fletsenhance.io%2F&psig=AOvVaw0xYzsG2UWKIKpefZ0oVc4a&ust=1730282086211000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNik45qps4kDFQAAAAAdAAAAABAE"
+  },
+  {
+    title: "Smartphone with Triple Camera",
+    link: "https://example.com/products/smartphone-triple-camera",
+    thumbnail: "https://example.com/images/smartphone-triple-camera.jpg"
+  },
+  {
+    title: "4K Ultra HD Smart TV",
+    link: "https://example.com/products/4k-ultra-hd-smart-tv",
+    thumbnail: "https://example.com/images/4k-ultra-hd-smart-tv.jpg"
+  },
+  {
+    title: "Portable Power Bank 10000mAh",
+    link: "https://example.com/products/portable-power-bank-10000mah",
+    thumbnail: "https://example.com/images/portable-power-bank-10000mah.jpg"
+  },
+  {
+    title: "Wireless Gaming Mouse",
+    link: "https://example.com/products/wireless-gaming-mouse",
+    thumbnail: "https://example.com/images/wireless-gaming-mouse.jpg"
+  },
+  {
+    title: "Noise-Canceling Earbuds",
+    link: "https://example.com/products/noise-canceling-earbuds",
+    thumbnail: "https://example.com/images/noise-canceling-earbuds.jpg"
+  },
+  {
+    title: "Laptop Stand with Adjustable Height",
+    link: "https://example.com/products/laptop-stand-adjustable-height",
+    thumbnail: "https://example.com/images/laptop-stand-adjustable-height.jpg"
+  },
+  {
+    title: "Waterproof Fitness Tracker",
+    link: "https://example.com/products/waterproof-fitness-tracker",
+    thumbnail: "https://example.com/images/waterproof-fitness-tracker.jpg"
+  },
+  {
+    title: "Bluetooth Speaker with Bass Boost",
+    link: "https://example.com/products/bluetooth-speaker-bass-boost",
+    thumbnail: "https://example.com/images/bluetooth-speaker-bass-boost.jpg"
+  },
+  {
+    title: "Portable SSD 1TB",
+    link: "https://example.com/products/portable-ssd-1tb",
+    thumbnail: "https://example.com/images/portable-ssd-1tb.jpg"
+  },
+  {
+    title: "Smartwatch with Heart Rate Monitor",
+    link: "https://example.com/products/smartwatch-heart-rate-monitor",
+    thumbnail: "https://example.com/images/smartwatch-heart-rate-monitor.jpg"
+  },
+  {
+    title: "Wireless Keyboard and Mouse Combo",
+    link: "https://example.com/products/wireless-keyboard-mouse-combo",
+    thumbnail: "https://example.com/images/wireless-keyboard-mouse-combo.jpg"
+  },
+  {
+    title: "HD Webcam with Microphone",
+    link: "https://example.com/products/hd-webcam-microphone",
+    thumbnail: "https://example.com/images/hd-webcam-microphone.jpg"
+  },
+  {
+    title: "Smart Home Security Camera",
+    link: "https://example.com/products/smart-home-security-camera",
+    thumbnail: "https://example.com/images/smart-home-security-camera.jpg"
+  },
+  {
+    title: "Portable Mini Projector",
+    link: "https://example.com/products/portable-mini-projector",
+    thumbnail: "https://example.com/images/portable-mini-projector.jpg"
+  },
+  {
+    title: "Mechanical Gaming Keyboard",
+    link: "https://example.com/products/mechanical-gaming-keyboard",
+    thumbnail: "https://example.com/images/mechanical-gaming-keyboard.jpg"
+  },
+  {
+    title: "Smart Air Purifier",
+    link: "https://example.com/products/smart-air-purifier",
+    thumbnail: "https://example.com/images/smart-air-purifier.jpg"
+  },
+  {
+    title: "High-Speed HDMI Cable",
+    link: "https://example.com/products/high-speed-hdmi-cable",
+    thumbnail: "https://example.com/images/high-speed-hdmi-cable.jpg"
+  },
+  {
+    title: "Ergonomic Office Chair",
+    link: "https://example.com/products/ergonomic-office-chair",
+    thumbnail: "https://example.com/images/ergonomic-office-chair.jpg"
+  },
+  {
+    title: "Multi-Port USB Charger",
+    link: "https://example.com/products/multi-port-usb-charger",
+    thumbnail: "https://example.com/images/multi-port-usb-charger.jpg"
+  }
+];
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+       <HeroParallax products={products} />
   );
 }

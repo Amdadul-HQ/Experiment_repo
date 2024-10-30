@@ -1,35 +1,40 @@
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import Image from "next/image";
+import image from "@/public/image.png"
+import image2 from "@/public/image_copy.png"
+import { MaskContainer } from "@/components/ui/svg-mask-effect";
+import { SVGMaskEffectDemo } from "@/components/ui/SVGMaskEffectDemo";
+import { SparklesPreview } from "@/components/ui/SparklesPreview";
 const products = [
   {
     title: "Wireless Bluetooth Headphones",
     link: "https://example.com/products/wireless-bluetooth-headphones",
-    thumbnail: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fletsenhance.io%2F&psig=AOvVaw0xYzsG2UWKIKpefZ0oVc4a&ust=1730282086211000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNik45qps4kDFQAAAAAdAAAAABAE"
+    thumbnail: image,
   },
   {
     title: "Smartphone with Triple Camera",
     link: "https://example.com/products/smartphone-triple-camera",
-    thumbnail: "https://example.com/images/smartphone-triple-camera.jpg"
+    thumbnail: image2,
   },
   {
     title: "4K Ultra HD Smart TV",
     link: "https://example.com/products/4k-ultra-hd-smart-tv",
-    thumbnail: "https://example.com/images/4k-ultra-hd-smart-tv.jpg"
+    thumbnail: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fall-images-hd&psig=AOvVaw1hWS6Tr6pPgUpIMq5Y01jD&ust=1730284079902000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPimo-Ows4kDFQAAAAAdAAAAABAE"
   },
   {
     title: "Portable Power Bank 10000mAh",
     link: "https://example.com/products/portable-power-bank-10000mah",
-    thumbnail: "https://example.com/images/portable-power-bank-10000mah.jpg"
+    thumbnail: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fall-images-hd&psig=AOvVaw1hWS6Tr6pPgUpIMq5Y01jD&ust=1730284079902000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPimo-Ows4kDFQAAAAAdAAAAABAE"
   },
   {
     title: "Wireless Gaming Mouse",
     link: "https://example.com/products/wireless-gaming-mouse",
-    thumbnail: "https://example.com/images/wireless-gaming-mouse.jpg"
+    thumbnail: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fall-images-hd&psig=AOvVaw1hWS6Tr6pPgUpIMq5Y01jD&ust=1730284079902000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPimo-Ows4kDFQAAAAAdAAAAABAE"
   },
   {
     title: "Noise-Canceling Earbuds",
     link: "https://example.com/products/noise-canceling-earbuds",
-    thumbnail: "https://example.com/images/noise-canceling-earbuds.jpg"
+    thumbnail: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fall-images-hd&psig=AOvVaw1hWS6Tr6pPgUpIMq5Y01jD&ust=1730284079902000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPimo-Ows4kDFQAAAAAdAAAAABAE"
   },
   {
     title: "Laptop Stand with Adjustable Height",
@@ -106,6 +111,8 @@ const products = [
 
 export default function Home() {
   return (
-       <HeroParallax products={products} />
+      //  <HeroParallax products={products} />
+      // <SVGMaskEffectDemo/>
+      <SparklesPreview/>
   );
 }

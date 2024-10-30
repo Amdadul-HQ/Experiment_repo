@@ -5,6 +5,7 @@ import image2 from "@/public/image_copy.png"
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { SVGMaskEffectDemo } from "@/components/ui/SVGMaskEffectDemo";
 import { SparklesPreview } from "@/components/ui/SparklesPreview";
+import { FeaturesSectionDemo } from "@/components/ui/FeaturesSectionDemo";
 const products = [
   {
     title: "Wireless Bluetooth Headphones",
@@ -113,6 +114,7 @@ export default function Home() {
   return (
       //  <HeroParallax products={products} />
       // <SVGMaskEffectDemo/>
-      <SparklesPreview/>
+      // <SparklesPreview/>
+      <FeaturesSectionDemo/>
   );
 }
